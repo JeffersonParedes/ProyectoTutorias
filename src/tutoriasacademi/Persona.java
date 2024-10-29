@@ -1,8 +1,4 @@
-
 package tutoriasacademi;
-
-
-
 
 abstract class Persona {
     private int codigo;
