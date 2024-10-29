@@ -4,15 +4,12 @@
  */
 package tutoriasacademi;
 
-
-
-    public class Alumno extends Persona {
+public class Alumno extends Persona {
     private String NivelEducativo;
     private String CentroEducativo;
-    
 
-    public Alumno(int codigo, String nombre, String apellido, String correo, String fechaDeNacimiento, String nacionalidad, String NivelEducativo , String CentroEducativo) {
-        super(codigo, nombre, apellido, correo, fechaDeNacimiento, nacionalidad);
+    public Alumno(int codigo, String nombre, String apellido, String correo, String fechaNacimiento, String nacionalidad, String genero, String NivelEducativo, String CentroEducativo) {
+        super(codigo, nombre, apellido, correo, fechaNacimiento, nacionalidad, genero);
         this.NivelEducativo = NivelEducativo;
         this.CentroEducativo = CentroEducativo;
     }
@@ -33,10 +30,8 @@ package tutoriasacademi;
         this.CentroEducativo = CentroEducativo;
     }
 
-
-
-    @Override
     public void mostrarInformacion() {
-        System.out.println("Codigo: " + getCodigo() + ", Nombre: " + getNombre() + ", Apellido: " + getApellido() + ", Correo: " + getCorreo() +", fechaDeNacimiento : " + getFechaDeNacimiento()+ ", nacionalidad : " + getNacionalidad() + ", nivelEducativo : " + NivelEducativo + ", Centro Educativo :  " + CentroEducativo);
+        System.out.println("Codigo: " + getCodigo() + ", Nombre: " + getNombre() + ", Apellido: " + getApellido() + ", Correo: " + getCorreo() + ", Fecha de Nacimiento: " + getFechaNacimiento() + ", Nacionalidad: " + getNacionalidad() + ", Genero: " + getGenero() + ", Nivel Educativo: " + NivelEducativo + ", Centro Educativo: " + CentroEducativo);
     }
 }
+
