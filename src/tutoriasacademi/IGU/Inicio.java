@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package tutoriasacademi.IGU;
-
+import tutoriasacademi.ArrayList.AlumnoArrayList;
+import tutoriasacademi.ArrayList.ProfesorArrayList;
+import tutoriasacademi.logica.Profesor;
+import tutoriasacademi.logica.Alumno;
+import tutoriasacademi.logica.Persona;
 /**
  *
  * @author jeffersonparedespretel
@@ -15,6 +19,8 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+         DatosPersona.pack();
+        DatosPersona.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,7 +41,7 @@ public class Inicio extends javax.swing.JFrame {
         TxtUsuario = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         TxtMensaje = new javax.swing.JTextArea();
-        TxtContra = new javax.swing.JPasswordField();
+        TxtClave = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         BtnIngresar = new javax.swing.JButton();
@@ -80,9 +86,9 @@ public class Inicio extends javax.swing.JFrame {
         TxtMensaje.setRows(5);
         jScrollPane1.setViewportView(TxtMensaje);
 
-        TxtContra.addActionListener(new java.awt.event.ActionListener() {
+        TxtClave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TxtContraActionPerformed(evt);
+                TxtClaveActionPerformed(evt);
             }
         });
 
@@ -121,7 +127,7 @@ public class Inicio extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(TxtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                                            .addComponent(TxtContra)))
+                                            .addComponent(TxtClave)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -130,7 +136,7 @@ public class Inicio extends javax.swing.JFrame {
                             .addComponent(jSeparator1))
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -155,7 +161,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TxtContra, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,14 +204,14 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtUsuarioActionPerformed
 
-    private void TxtContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtContraActionPerformed
+    private void TxtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtClaveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TxtContraActionPerformed
+    }//GEN-LAST:event_TxtClaveActionPerformed
 
     private void BtnLimpiarResistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimpiarResistroActionPerformed
      
  TxtUsuario.setText("");
- TxtContra.setText("");
+ TxtClave.setText("");
  TxtMensaje.setText("");
     }//GEN-LAST:event_BtnLimpiarResistroActionPerformed
 
@@ -218,6 +224,55 @@ public class Inicio extends javax.swing.JFrame {
 
     private void BtnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarActionPerformed
         // TODO add your handling code here:
+        String usuario = TxtUsuario.getText();
+    String clave = TxtClave.getText();
+     if (usuario.isEmpty() || Clave.isEmpty()) {
+        TxtMensaje.setText("Por favor, ingrese ambos campos.");
+        return; 
+     }
+        
+        Profesor profesor = buscarProfesor(usuario, clave);
+    Alumno alumno = buscarAlumno(usuario, clave);
+    
+    if (profesor != null) {
+        ProfesorGUI profesorPortal = new ProfesorGUI();
+        profesorPortal.setVisible(true);   // Mostrar el portal del profesor
+        this.dispose();
+    }
+         else {
+        TxtMensaje.setText("Usuario o contraseña incorrectos.");
+    }
+}
+
+// Método para buscar un profesor
+private Profesor buscarProfesor(String usuario, String clave) {
+    // Aquí deberías verificar si el usuario y la contraseña coinciden con un profesor
+    for (Profesor prof : profesores) {
+        if (prof.getUsuario().equals(usuario) && prof.getClave().equals(clave)) {
+            return prof;  // Retorna el profesor si es válido
+        }
+    }
+    return null;  // Retorna null si no se encuentra el profesor
+}
+
+// Método para buscar un alumno
+private Alumno buscarAlumno(String usuario, String clave) {
+    // Aquí deberías verificar si el usuario y la contraseña coinciden con un alumno
+    for (Alumno al : alumnos) {
+        if (al.getUsuario().equals(usuario) && al.getClave().equals(clave)) {
+            return al;  // Retorna el alumno si es válido
+        }
+    }
+    return null;
+    }
+         else if (alumno != null) {
+        PortalAlumno portalAlumno = new PortalAlumno();
+        portalAlumno.setVisible(true);   // Mostrar el portal del alumno
+        this.dispose();
+             
+         }
+    
+    
     }//GEN-LAST:event_BtnIngresarActionPerformed
 
    
@@ -226,7 +281,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton BtnIngresar;
     private javax.swing.JButton BtnLimpiarResistro;
     private javax.swing.JButton BtnRegistrarse;
-    private javax.swing.JPasswordField TxtContra;
+    private javax.swing.JPasswordField TxtClave;
     private javax.swing.JTextArea TxtMensaje;
     private javax.swing.JTextField TxtUsuario;
     private javax.swing.JLabel jLabel1;

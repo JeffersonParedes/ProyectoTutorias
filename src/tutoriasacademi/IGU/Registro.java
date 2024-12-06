@@ -762,12 +762,22 @@ private ProfesorArrayList listaProfesor = new ProfesorArrayList();
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-    
+       RAlumno.setSize(400, 300); 
+    RAlumno.setVisible(true);
+    RProfesor.setVisible(false);
+    int x = (this.getWidth() - RAlumno.getWidth()) / 2;
+    int y = (this.getHeight() - RAlumno.getHeight()) / 2;
+    RAlumno.setLocation(x, y);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-         
+        RProfesor.setSize(400, 300); 
+          RProfesor.setVisible(true);
+    RAlumno.setVisible(false);  
+     int x = (this.getWidth() - RProfesor.getWidth()) / 2;
+    int y = (this.getHeight() - RProfesor.getHeight()) / 2;
+    RProfesor.setLocation(x, y);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
