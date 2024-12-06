@@ -8,15 +8,15 @@ package tutoriasacademi.logica;
  *
  * @author jeffersonparedespretel
  */
-public class Tutor extends Persona {
+public class Profesor extends Persona {
     private String Especialidad;
     private String Descripcion;
     private double CostoPorHora;
     private MaterialDeEstudio MaterialDeEstudio;
     private Disponibilidad Disponibilidad;
 
-    public Tutor(String Especialidad, String Descripcion, double CostoPorHora, MaterialDeEstudio MaterialDeEstudio, Disponibilidad Disponibilidad, int codigo, String Nombre, String Apellido, String Correo, tutoriasacademi.logica.Rol Rol, String Nacionalidad, String Genero, String Usuario, String Clave) {
-        super(codigo, Nombre, Apellido, Correo, Rol, Nacionalidad, Genero, Usuario, Clave);
+    public Profesor(String Especialidad, String Descripcion, double CostoPorHora, MaterialDeEstudio MaterialDeEstudio, Disponibilidad Disponibilidad, String Nombre, String Apellido, String Correo, String Nacionalidad, String Genero, String Usuario, String Clave) {
+        super( Nombre, Apellido, Correo, Nacionalidad, Genero, Usuario, Clave);
         this.Especialidad = Especialidad;
         this.Descripcion = Descripcion;
         this.CostoPorHora = CostoPorHora;

@@ -12,13 +12,11 @@ public class Evaluacion {
     private Tema Tema;
     private int NumeroDePreguntas;
     private int PuntajeTotal;
-    private Calificacion Calificacion;
 
     public Evaluacion(Tema Tema, int NumeroDePreguntas, int PuntajeTotal, Calificacion Calificacion) {
         this.Tema = Tema;
         this.NumeroDePreguntas = NumeroDePreguntas;
         this.PuntajeTotal = PuntajeTotal;
-        this.Calificacion = Calificacion;
     }
 
     public Tema getTema() {
@@ -44,15 +42,4 @@ public class Evaluacion {
     public void setPuntajeTotal(int PuntajeTotal) {
         this.PuntajeTotal = PuntajeTotal;
     }
-
-    public Calificacion getCalificacion() {
-        return Calificacion;
     }
-
-    public void setCalificacion(Calificacion Calificacion) {
-        this.Calificacion = Calificacion;
-    }
-    
-
-    
-}

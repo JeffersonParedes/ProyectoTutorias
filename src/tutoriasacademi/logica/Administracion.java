@@ -12,8 +12,8 @@ public class Administracion extends Persona{
     private String Puesto;
     private String Salario;
 
-    public Administracion(String Puesto, String Salario, int codigo, String Nombre, String Apellido, String Correo, tutoriasacademi.logica.Rol Rol, String Nacionalidad, String Genero, String Usuario, String Clave) {
-        super(codigo, Nombre, Apellido, Correo, Rol, Nacionalidad, Genero, Usuario, Clave);
+    public Administracion(String Puesto, String Salario, int codigo, String Nombre, String Apellido, String Correo,  String Nacionalidad, String Genero, String Usuario, String Clave) {
+        super( Nombre, Apellido, Correo, Nacionalidad, Genero, Usuario, Clave);
         this.Puesto = Puesto;
         this.Salario = Salario;
     }

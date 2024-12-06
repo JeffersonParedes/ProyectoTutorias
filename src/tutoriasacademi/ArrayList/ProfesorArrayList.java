@@ -4,29 +4,29 @@
  */
 package tutoriasacademi.ArrayList;
 import java.util.ArrayList;
-import tutoriasacademi.logica.Tutor;
+import tutoriasacademi.logica.Profesor;
 
 /**
  *
  * @author alexr
  */
 public class ProfesorArrayList {
-    private ArrayList<Tutor> tutores;
+    private ArrayList<Profesor> profesores;
 
     public ProfesorArrayList() {
-        this.tutores = new ArrayList<>();
+        this.profesores = new ArrayList<>();
     }
 
-    public void agregarTutor(Tutor tutor) {
-        this.tutores.add(tutor);
+    public void agregarProfesor(Profesor tutor) {
+        this.profesores.add(tutor);
     }
 
-    public Tutor obtenerTutor(int index) {
-        return this.tutores.get(index);
+    public Profesor obtenerProfesor(int index) {
+        return this.profesores.get(index);
     }
 
-    public int cantidadTutores() {
-        return this.tutores.size();
+    public int cantidadProfesores() {
+        return this.profesores.size();
     }
     
 }

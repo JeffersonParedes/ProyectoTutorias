@@ -13,14 +13,12 @@ public class MaterialDeEstudio {
     private String Descripcion;
     private String Tipo;
     private Tema Tema;
-    private Evaluacion Evaluacion;
 
-    public MaterialDeEstudio(String Titulo, String Descripcion, String Tipo, Tema Tema, Evaluacion Evaluacion) {
+    public MaterialDeEstudio(String Titulo, String Descripcion, String Tipo, Tema Tema) {
         this.Titulo = Titulo;
         this.Descripcion = Descripcion;
         this.Tipo = Tipo;
         this.Tema = Tema;
-        this.Evaluacion = Evaluacion;
     }
 
     public String getTitulo() {
@@ -53,14 +51,6 @@ public class MaterialDeEstudio {
 
     public void setTema(Tema Tema) {
         this.Tema = Tema;
-    }
-
-    public Evaluacion getEvaluacion() {
-        return Evaluacion;
-    }
-
-    public void setEvaluacion(Evaluacion Evaluacion) {
-        this.Evaluacion = Evaluacion;
     }
     
 }

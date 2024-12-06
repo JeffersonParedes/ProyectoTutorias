@@ -4,14 +4,22 @@
  */
 package tutoriasacademi.IGU;
 import java.util.Date;
-import tutoriasacademi.IGU.PortalAlumno;
-import tutoriasacademi.IGU.ProfesorGUI;
+import tutoriasacademi.IGU.Inicio;
+import tutoriasacademi.logica.Alumno;
+import tutoriasacademi.logica.Profesor;
+import tutoriasacademi.ArrayList.AlumnoArrayList;
+import tutoriasacademi.ArrayList.ProfesorArrayList;
+import tutoriasacademi.logica.Disponibilidad;
+import tutoriasacademi.logica.MaterialDeEstudio;
+import tutoriasacademi.logica.Tema;
+import tutoriasacademi.logica.Evaluacion;
 /**
  *
  * @author jeffersonparedespretel
  */
 public class Registro extends javax.swing.JFrame {
-
+private AlumnoArrayList listaAlumno = new AlumnoArrayList();
+private ProfesorArrayList listaProfesor = new ProfesorArrayList();
     /**
      * Creates new form Registro
      */
@@ -73,9 +81,9 @@ public class Registro extends javax.swing.JFrame {
         txtUsuarioTutor = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         txtCorreoTutor = new javax.swing.JTextField();
-        txtEspecialodadTutor = new javax.swing.JTextField();
+        txtEspecialidadTutor = new javax.swing.JTextField();
         txtNacionalidadTuTor = new javax.swing.JTextField();
-        txtClaveTutor = new javax.swing.JTextField();
+        txtGradoAcademico = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -103,6 +111,8 @@ public class Registro extends javax.swing.JFrame {
         texMensaje1 = new javax.swing.JTextArea();
         FechaDispro = new com.toedter.calendar.JDateChooser();
         jComboGeneroTutor1 = new javax.swing.JComboBox<>();
+        txtClaveTutor1 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -353,17 +363,17 @@ public class Registro extends javax.swing.JFrame {
 
         txtCorreoTutor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
-        txtEspecialodadTutor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        txtEspecialidadTutor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         txtNacionalidadTuTor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
-        txtClaveTutor.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        txtGradoAcademico.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
 
         jLabel22.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel22.setText("Usuario");
+        jLabel22.setText("Usuario:");
 
         jLabel23.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel23.setText("Clave:");
+        jLabel23.setText("Grado Academico:");
 
         jLabel24.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel24.setText("Costo por Hora:");
@@ -468,6 +478,11 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
+        txtClaveTutor1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
+        jLabel27.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel27.setText("Clave:");
+
         javax.swing.GroupLayout RProfesorLayout = new javax.swing.GroupLayout(RProfesor.getContentPane());
         RProfesor.getContentPane().setLayout(RProfesorLayout);
         RProfesorLayout.setHorizontalGroup(
@@ -476,6 +491,60 @@ public class Registro extends javax.swing.JFrame {
             .addGroup(RProfesorLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RProfesorLayout.createSequentialGroup()
+                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel17))
+                        .addGap(18, 18, 18)
+                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(RProfesorLayout.createSequentialGroup()
+                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RProfesorLayout.createSequentialGroup()
+                                            .addComponent(txtCorreoTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel22))
+                                        .addGroup(RProfesorLayout.createSequentialGroup()
+                                            .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(txtNombreTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtApellidoTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(163, 163, 163)
+                                            .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(18, 18, 18)
+                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtUsuarioTutor)
+                                    .addComponent(txtCostoTutor)
+                                    .addComponent(txtEspecialidadTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtClaveTutor1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(RProfesorLayout.createSequentialGroup()
+                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RProfesorLayout.createSequentialGroup()
+                                        .addComponent(txtNacionalidadTuTor, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(217, 217, 217))
+                                    .addComponent(FechaTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(RProfesorLayout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel23))
+                                    .addGroup(RProfesorLayout.createSequentialGroup()
+                                        .addGap(90, 90, 90)
+                                        .addComponent(jLabel19)))
+                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(RProfesorLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jComboGeneroTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(RProfesorLayout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addComponent(txtGradoAcademico, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(RProfesorLayout.createSequentialGroup()
                         .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RProfesorLayout.createSequentialGroup()
@@ -510,53 +579,7 @@ public class Registro extends javax.swing.JFrame {
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(RProfesorLayout.createSequentialGroup()
                                 .addComponent(jLabel36)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(RProfesorLayout.createSequentialGroup()
-                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel21)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel17))
-                        .addGap(18, 18, 18)
-                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RProfesorLayout.createSequentialGroup()
-                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RProfesorLayout.createSequentialGroup()
-                                        .addComponent(txtNacionalidadTuTor, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(307, 307, 307))
-                                    .addGroup(RProfesorLayout.createSequentialGroup()
-                                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(FechaTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addComponent(jLabel19)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboGeneroTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(RProfesorLayout.createSequentialGroup()
-                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RProfesorLayout.createSequentialGroup()
-                                            .addComponent(txtCorreoTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel22))
-                                        .addGroup(RProfesorLayout.createSequentialGroup()
-                                            .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(txtNombreTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtApellidoTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(163, 163, 163)
-                                            .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING))))
-                                    .addComponent(jLabel23))
-                                .addGap(18, 18, 18)
-                                .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtUsuarioTutor)
-                                    .addComponent(txtClaveTutor)
-                                    .addComponent(txtCostoTutor)
-                                    .addComponent(txtEspecialodadTutor, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
             .addComponent(jSeparator1)
             .addGroup(RProfesorLayout.createSequentialGroup()
                 .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -572,13 +595,12 @@ public class Registro extends javax.swing.JFrame {
                                 .addGap(9, 9, 9))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RProfesorLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel30)
-                                .addGap(18, 18, 18)))
+                                .addComponent(jLabel30)))
                         .addGap(32, 32, 32)
                         .addComponent(btnLimpiar1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 15, Short.MAX_VALUE))
         );
         RProfesorLayout.setVerticalGroup(
             RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -592,7 +614,7 @@ public class Registro extends javax.swing.JFrame {
                             .addComponent(jLabel18)
                             .addComponent(txtNombreTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14)
-                            .addComponent(txtEspecialodadTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtEspecialidadTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel24)
@@ -609,22 +631,29 @@ public class Registro extends javax.swing.JFrame {
                         .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel20)
                             .addComponent(txtNacionalidadTuTor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtClaveTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabel27)
+                            .addComponent(txtClaveTutor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel23)
+                                .addComponent(txtGradoAcademico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(RProfesorLayout.createSequentialGroup()
                                 .addComponent(jLabel21)
-                                .addGap(6, 6, 6))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel19)
-                                .addComponent(jComboGeneroTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(16, 16, 16))))
                     .addComponent(FechaTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RProfesorLayout.createSequentialGroup()
+                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboGeneroTutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19))
+                        .addGap(69, 69, 69))
+                    .addGroup(RProfesorLayout.createSequentialGroup()
+                        .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(RProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RProfesorLayout.createSequentialGroup()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -673,7 +702,7 @@ public class Registro extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSalir1))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -734,10 +763,12 @@ public class Registro extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+    
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
@@ -749,25 +780,48 @@ public class Registro extends javax.swing.JFrame {
         String clave=txtclave.getText();
         String nacionalidad=txtnacionalidad.getText();
         String genero= (String) comboGenero.getSelectedItem();
-        String tipoUsuario= (String) combTipo.getSelectedItem();
         Date fechaNacimiento = fechanacimiento.getDate();
+        String NivelEducativo = TxtNivelEducativo.getText();
+        String CentroEducativo = TxtCentroEstudio.getText();
 
-        if (nombre.isEmpty() || apellido.isEmpty() || correo.isEmpty() || correo.isEmpty() || usuario.isEmpty() || clave.isEmpty()) {
+        if (nombre.isEmpty() || apellido.isEmpty() || correo.isEmpty() || correo.isEmpty() || usuario.isEmpty() || clave.isEmpty() || nacionalidad.isEmpty() || genero.isEmpty()|| NivelEducativo.isEmpty() || CentroEducativo.isEmpty()) {
             texMensaje.setText("Porfavor, complete todo los espacios obligatorios ");
             return;
         }
-        texMensaje.setText("Registro completo" + usuario+ ".");
 
-        if (tipoUsuario.equals("Alumno")) {
-            PortalAlumno PortalAlumno = new PortalAlumno();
-            PortalAlumno.setVisible(true);
-        } else if (tipoUsuario.equals("Tutor")) {
-            ProfesorGUI ProfesorGUI = new ProfesorGUI();
-            ProfesorGUI.setVisible(true);
-        }
+    if (!correo.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+        texMensaje.setText("Ingrese un correo electrónico válido.");
+        return;
+    }
+
+    if (fechaNacimiento == null) {
+        texMensaje.setText("Seleccione una fecha de nacimiento válida.");
+        return;
+    }
+
+    Date hoy = new Date();
+    if (fechaNacimiento.after(hoy)) {
+        texMensaje.setText("La fecha de nacimiento no puede ser futura.");
+        return;
+    }
+        Alumno nuevoAlumno = new Alumno( 
+                NivelEducativo,
+                CentroEducativo,
+                nombre,
+                apellido,
+                correo,
+                nacionalidad,
+                genero,
+                fechaNacimiento,
+                usuario,
+                clave
+        );
+        listaAlumno.agregarAlumno(nuevoAlumno);
+        texMensaje.setText("Alumno registrado con éxito: " + usuario);
+        texMensaje.setText("Registro completo" + usuario+ ".");
         this.dispose();
     }//GEN-LAST:event_btnRegistrarActionPerformed
-
+    
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         // TODO add your handling code here:
         txtnombre.setText("");
@@ -777,14 +831,17 @@ public class Registro extends javax.swing.JFrame {
         txtclave.setText("");
         txtnacionalidad.setText("");
         fechanacimiento.setDate(null);
-        combTipo.setSelectedIndex(0);
         comboGenero.setSelectedIndex(0);
+        TxtNivelEducativo.setText("");
+        TxtCentroEstudio.setText("");
         texMensaje.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+         Inicio inicio = new Inicio();
+            inicio.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
@@ -793,14 +850,67 @@ public class Registro extends javax.swing.JFrame {
 
     private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
         // TODO add your handling code here:
+         Inicio inicio = new Inicio();
+            inicio.setVisible(true);
+    this.dispose();      
     }//GEN-LAST:event_btnSalir1ActionPerformed
 
     private void btnLimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiar1ActionPerformed
         // TODO add your handling code here:
+     txtNombreTutor.setText("");
+    txtApellidoTutor.setText("");
+    txtCorreoTutor.setText("");
+    txtUsuarioTutor.setText("");
+    txtClaveTutor1.setText("");
+    txtNacionalidadTuTor.setText("");
+    txtEspecialidadTutor.setText("");
+    txtGradoAcademico.setText("");
+    comboGenero.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiar1ActionPerformed
 
     private void btnRegistrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrar1ActionPerformed
         // TODO add your handling code here:
+     String nombre = txtNombreTutor.getText();
+    String apellido = txtApellidoTutor.getText();
+    String correo = txtCorreoTutor.getText();
+    String usuario = txtUsuarioTutor.getText();
+    String clave = txtClaveTutor1.getText();
+    String nacionalidad = txtNacionalidadTuTor.getText();
+    String genero = (String) comboGenero.getSelectedItem();
+    String especialidad = txtEspecialidadTutor.getText();
+    String gradoacademico = txtGradoAcademico.getText();
+    String descripcion = txtDescripcion.getText();
+    
+    if (nombre.isEmpty() || apellido.isEmpty() || correo.isEmpty() || usuario.isEmpty() || clave.isEmpty() || nacionalidad.isEmpty() || especialidad.isEmpty() || gradoacademico.isEmpty() || genero.isEmpty()) {
+        texMensaje.setText("Por favor, complete todos los campos obligatorios.");
+        return;
+    }
+    if (!correo.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+        texMensaje.setText("Ingrese un correo electrónico válido.");
+        return;
+    }
+    Tema tema = new Tema("TemaNombre", "TemaDescripcion", "TemaTipo", "TemaNivel");
+MaterialDeEstudio material = new MaterialDeEstudio("Nombre", "Descripción", "Tipo", tema);
+Disponibilidad disponibilidad = new Disponibilidad(1, "Disponible", 10, 50.0, 100.0);
+
+    Profesor nuevoProfesor = new Profesor(
+             especialidad, 
+        descripcion, 
+        Double.parseDouble(txtCostoTutor.getText()),
+        material, 
+        disponibilidad, 
+        nombre, 
+        apellido, 
+        correo, 
+        nacionalidad, 
+        genero, 
+        usuario, 
+        clave
+    );
+    listaProfesor.agregarProfesor(nuevoProfesor);
+    
+
+    texMensaje.setText("Profesor registrado con éxito: " + usuario);
     }//GEN-LAST:event_btnRegistrar1ActionPerformed
 
     private void txtDescripcionMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripcionMaterialActionPerformed
@@ -868,6 +978,7 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
@@ -895,12 +1006,13 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JTextArea texMensaje;
     private javax.swing.JTextArea texMensaje1;
     private javax.swing.JTextField txtApellidoTutor;
-    private javax.swing.JTextField txtClaveTutor;
+    private javax.swing.JTextField txtClaveTutor1;
     private javax.swing.JTextField txtCorreoTutor;
     private javax.swing.JTextField txtCostoTutor;
     private javax.swing.JTextArea txtDescripcion;
     private javax.swing.JTextField txtDescripcionMaterial;
-    private javax.swing.JTextField txtEspecialodadTutor;
+    private javax.swing.JTextField txtEspecialidadTutor;
+    private javax.swing.JTextField txtGradoAcademico;
     private javax.swing.JTextField txtHoraFinTutor;
     private javax.swing.JTextField txtHotaInicioTutor;
     private javax.swing.JTextField txtNacionalidadTuTor;
