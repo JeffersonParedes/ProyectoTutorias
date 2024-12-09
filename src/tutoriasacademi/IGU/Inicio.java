@@ -7,21 +7,47 @@ import tutoriasacademi.ArrayList.AlumnoArrayList;
 import tutoriasacademi.ArrayList.ProfesorArrayList;
 import tutoriasacademi.logica.Profesor;
 import tutoriasacademi.logica.Alumno;
-import tutoriasacademi.logica.Persona;
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author jeffersonparedespretel
  */
 public class Inicio extends javax.swing.JFrame {
-
+  private List<Profesor> profesores = new ArrayList<>();
+  private ProfesorArrayList profesoresArrayList;
+    private List<Alumno> alumnos = new ArrayList<>();
+    private AlumnoArrayList alumnoArrayList;
     /**
      * Creates new form Registro
      */
     public Inicio() {
         initComponents();
-         DatosPersona.pack();
-        DatosPersona.setLocationRelativeTo(null);
+        profesoresArrayList = new ProfesorArrayList();
+        alumnoArrayList =  new AlumnoArrayList(); 
+        setLocationRelativeTo(null);
+        
     }
+        
+private Profesor buscarProfesor(String usuario, String clave) {
+        for (Profesor prof : profesores) {
+            if (prof.getUsuario().equals(usuario) && prof.getClave().equals(clave)) {
+                return prof; 
+            }
+        }
+        return null; 
+    }
+
+    private Alumno buscarAlumno(String usuario, String clave) {
+        for (Alumno al : alumnos) {
+            if (al.getUsuario().equals(usuario) && al.getClave().equals(clave)) {
+                return al; 
+            }
+        }
+        return null; 
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -225,8 +251,9 @@ public class Inicio extends javax.swing.JFrame {
     private void BtnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarActionPerformed
         // TODO add your handling code here:
         String usuario = TxtUsuario.getText();
-    String clave = TxtClave.getText();
-     if (usuario.isEmpty() || Clave.isEmpty()) {
+    String clave = new  String (TxtClave.getPassword());
+    
+     if (usuario.isEmpty() || clave.isEmpty()) {
         TxtMensaje.setText("Por favor, ingrese ambos campos.");
         return; 
      }
@@ -236,41 +263,17 @@ public class Inicio extends javax.swing.JFrame {
     
     if (profesor != null) {
         ProfesorGUI profesorPortal = new ProfesorGUI();
-        profesorPortal.setVisible(true);   // Mostrar el portal del profesor
+        profesorPortal.setVisible(true);  
         this.dispose();
-    }
-         else {
-        TxtMensaje.setText("Usuario o contraseña incorrectos.");
-    }
-}
-
-// Método para buscar un profesor
-private Profesor buscarProfesor(String usuario, String clave) {
-    // Aquí deberías verificar si el usuario y la contraseña coinciden con un profesor
-    for (Profesor prof : profesores) {
-        if (prof.getUsuario().equals(usuario) && prof.getClave().equals(clave)) {
-            return prof;  // Retorna el profesor si es válido
-        }
-    }
-    return null;  // Retorna null si no se encuentra el profesor
-}
-
-// Método para buscar un alumno
-private Alumno buscarAlumno(String usuario, String clave) {
-    // Aquí deberías verificar si el usuario y la contraseña coinciden con un alumno
-    for (Alumno al : alumnos) {
-        if (al.getUsuario().equals(usuario) && al.getClave().equals(clave)) {
-            return al;  // Retorna el alumno si es válido
-        }
-    }
-    return null;
-    }
-         else if (alumno != null) {
+    }    else if (alumno != null) {
         PortalAlumno portalAlumno = new PortalAlumno();
-        portalAlumno.setVisible(true);   // Mostrar el portal del alumno
+        portalAlumno.setVisible(true); 
         this.dispose();
-             
-         }
+    } else {
+        TxtMensaje.setText("Usuario o contraseña incorrectos.");{    
+    }   
+    
+    }
     
     
     }//GEN-LAST:event_BtnIngresarActionPerformed

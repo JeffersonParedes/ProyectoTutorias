@@ -28,6 +28,8 @@ public class ProfesorArrayList {
     public int cantidadProfesores() {
         return this.profesores.size();
     }
-    
+    public ArrayList<Profesor> obtenerTodo() {
+        return this.profesores;
+    }
 }
 

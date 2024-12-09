@@ -21,6 +21,9 @@ public class AlumnoArrayList {
     public int cantidadAlumnos() {
         return this.alumnos.size();
     }
+    public ArrayList<Alumno> obtenerTodos() {
+    return this.alumnos;
+}
 }
 
 
