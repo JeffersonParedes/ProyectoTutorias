@@ -4,7 +4,7 @@
  */
 package tutoriasacademi.IGU;
 import java.util.Date;
-import tutoriasacademi.IGU.Inicio;
+import tutoriasacademi.IGU.A_Inicio;
 import tutoriasacademi.logica.Alumno;
 import tutoriasacademi.logica.Profesor;
 import tutoriasacademi.ArrayList.AlumnoArrayList;
@@ -16,13 +16,13 @@ import tutoriasacademi.logica.MaterialDeEstudio;
  *
  * @author jeffersonparedespretel
  */
-public class Registro extends javax.swing.JFrame {
+public class A_Registro extends javax.swing.JFrame {
 private AlumnoArrayList listaAlumno = new AlumnoArrayList();
 private ProfesorArrayList listaProfesor = new ProfesorArrayList();
     /**
      * Creates new form Registro
      */
-    public Registro() {
+    public A_Registro() {
         initComponents();
     }
 
@@ -848,7 +848,7 @@ private ProfesorArrayList listaProfesor = new ProfesorArrayList();
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-         Inicio inicio = new Inicio();
+         A_Inicio inicio = new A_Inicio();
             inicio.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
@@ -859,7 +859,7 @@ private ProfesorArrayList listaProfesor = new ProfesorArrayList();
 
     private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
         // TODO add your handling code here:
-         Inicio inicio = new Inicio();
+         A_Inicio inicio = new A_Inicio();
             inicio.setVisible(true);
     this.dispose();      
     }//GEN-LAST:event_btnSalir1ActionPerformed

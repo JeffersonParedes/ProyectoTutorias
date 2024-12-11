@@ -10,13 +10,13 @@ import javax.swing.JFrame;
  *
  * @author alexr
  */
-public class ProfesorGUI extends javax.swing.JFrame {
+public class A_ProfesorGUI extends javax.swing.JFrame {
 
 
     /**
      * Creates new form ProfesorGUI
      */
-    public ProfesorGUI() {
+    public A_ProfesorGUI() {
         initComponents();
         DatosPersona.pack();
         DatosPersona.setLocationRelativeTo(null);

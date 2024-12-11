@@ -8,12 +8,12 @@ package tutoriasacademi.IGU;
  *
  * @author jeffersonparedespretel
  */
-public class PortalAlumno extends javax.swing.JFrame {
+public class A_PortalAlumno extends javax.swing.JFrame {
 
     /**
      * Creates new form PortalAlumno
      */
-    public PortalAlumno() {
+    public A_PortalAlumno() {
         initComponents();
     }
 

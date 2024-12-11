@@ -14,15 +14,15 @@ import java.util.List;
  *
  * @author jeffersonparedespretel
  */
-public class Inicio extends javax.swing.JFrame {
+public class A_Inicio extends javax.swing.JFrame {
   private List<Profesor> profesores = new ArrayList<>();
   private ProfesorArrayList profesoresArrayList;
     private List<Alumno> alumnos = new ArrayList<>();
     private AlumnoArrayList alumnoArrayList;
     /**
-     * Creates new form Registro
+     * Creates new form A_Registro
      */
-    public Inicio() {
+    public A_Inicio() {
         initComponents();
         profesoresArrayList = new ProfesorArrayList();
         alumnoArrayList =  new AlumnoArrayList(); 
@@ -242,7 +242,7 @@ private Profesor buscarProfesor(String usuario, String clave) {
     }//GEN-LAST:event_BtnLimpiarResistroActionPerformed
 
     private void BtnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarseActionPerformed
-        Registro newframe = new Registro();
+        A_Registro newframe = new A_Registro();
         newframe.setVisible(true);
         this.dispose();
         
@@ -263,12 +263,12 @@ private Profesor buscarProfesor(String usuario, String clave) {
     
     if (profesor != null) {
         JOptionPane.showMessageDialog(this, "Bienvenido Profesor: " + profesor.getUsuario());
-        ProfesorGUI profesorPortal = new ProfesorGUI();
+        A_ProfesorGUI profesorPortal = new A_ProfesorGUI();
         profesorPortal.setVisible(true);  
         this.dispose();
     }    else if (alumno != null) {
         JOptionPane.showMessageDialog(this, "Bienvenido Alumno:" + alumno.getUsuario());
-        PortalAlumno portalAlumno = new PortalAlumno();
+        A_PortalAlumno portalAlumno = new A_PortalAlumno();
         portalAlumno.setVisible(true); 
         this.dispose();
     } else {

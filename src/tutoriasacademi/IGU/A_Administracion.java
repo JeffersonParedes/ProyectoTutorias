@@ -8,12 +8,12 @@ package tutoriasacademi.IGU;
  *
  * @author jeffersonparedespretel
  */
-public class Administracion extends javax.swing.JFrame {
+public class A_Administracion extends javax.swing.JFrame {
 
     /**
      * Creates new form Administracion
      */
-    public Administracion() {
+    public A_Administracion() {
         initComponents();
     }
 
@@ -220,7 +220,7 @@ public class Administracion extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(DatosPersonalAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel238)
-                    .addComponent(jDateChooser20, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                    .addComponent(jDateChooser20, javax.swing.GroupLayout.PREFERRED_SIZE, 29, Short.MAX_VALUE))
                 .addGap(53, 53, 53)
                 .addGroup(DatosPersonalAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton73)
