@@ -1469,7 +1469,7 @@
               <Font name="Helvetica Neue" size="48" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Bienvenido Tutor"/>
+            <Property name="text" type="java.lang.String" value="Bienvenido Profesor"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton15">

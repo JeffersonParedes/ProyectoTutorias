@@ -913,7 +913,7 @@ public class ProfesorGUI extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Bienvenido Tutor");
+        jLabel1.setText("Bienvenido Profesor");
 
         jButton15.setText("Salir");
 
