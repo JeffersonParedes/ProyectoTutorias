@@ -825,9 +825,9 @@ private ProfesorArrayList listaProfesor = new ProfesorArrayList();
                 usuario,
                 clave
         );
-        listaAlumno.agregarAlumno(nuevoAlumno);
-        texMensaje.setText("Alumno registrado con éxito: " + usuario);
+              listaAlumno.agregarAlumno(nuevoAlumno);
         texMensaje.setText("Registro completo " + usuario+ ".");
+              System.out.println("Número total de alumnos registrados: " + listaAlumno.getLista().size());
         this.dispose();
     }//GEN-LAST:event_btnRegistrarActionPerformed
     
@@ -917,8 +917,8 @@ Disponibilidad disponibilidad = new Disponibilidad(1, "Disponible", 10, 50.0, 10
         clave
     );
     listaProfesor.agregarProfesor(nuevoProfesor);
-    texMensaje.setText("Profesor registrado con éxito: " + usuario);
      texMensaje.setText("Registro completo  " + usuario+ ".");
+      System.out.println("Número total de profesores registrados: " + listaProfesor.getLista().size());
     }//GEN-LAST:event_btnRegistrar1ActionPerformed
 
     private void txtDescripcionMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripcionMaterialActionPerformed

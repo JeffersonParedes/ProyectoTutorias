@@ -31,7 +31,7 @@ public class Inicio extends javax.swing.JFrame {
     }
         
 private Profesor buscarProfesor(String usuario, String clave) {
-        for (Profesor prof : profesores) {
+        for (Profesor prof : profesoresArrayList.getLista()) {
             if (prof.getUsuario().equals(usuario) && prof.getClave().equals(clave)) {
                 return prof; 
             }
@@ -40,7 +40,7 @@ private Profesor buscarProfesor(String usuario, String clave) {
     }
 
     private Alumno buscarAlumno(String usuario, String clave) {
-        for (Alumno al : alumnos) {
+        for (Alumno al : alumnoArrayList.getLista()) {
             if (al.getUsuario().equals(usuario) && al.getClave().equals(clave)) {
                 return al; 
             }
@@ -262,10 +262,12 @@ private Profesor buscarProfesor(String usuario, String clave) {
     Alumno alumno = buscarAlumno(usuario, clave);
     
     if (profesor != null) {
+        JOptionPane.showMessageDialog(this, "Bienvenido Profesor: " + profesor.getUsuario());
         ProfesorGUI profesorPortal = new ProfesorGUI();
         profesorPortal.setVisible(true);  
         this.dispose();
     }    else if (alumno != null) {
+        JOptionPane.showMessageDialog(this, "Bienvenido Alumno:" + alumno.getUsuario());
         PortalAlumno portalAlumno = new PortalAlumno();
         portalAlumno.setVisible(true); 
         this.dispose();

@@ -11,12 +11,14 @@ import tutoriasacademi.logica.Profesor;
  * @author alexr
  */
 public class ProfesorArrayList {
-    private ArrayList<Profesor> profesores;
+    private ArrayList<Profesor> profesores = new ArrayList<>();
 
     public ProfesorArrayList() {
         this.profesores = new ArrayList<>();
     }
-
+ public ArrayList<Profesor> getLista() {
+        return profesores;
+    }
     public void agregarProfesor(Profesor tutor) {
         this.profesores.add(tutor);
     }
