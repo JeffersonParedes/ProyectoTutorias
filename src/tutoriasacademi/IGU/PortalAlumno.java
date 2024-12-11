@@ -56,31 +56,45 @@ public class PortalAlumno extends javax.swing.JFrame {
         jScrollPane19 = new javax.swing.JScrollPane();
         jTable19 = new javax.swing.JTable();
         PedirTutoria = new javax.swing.JFrame();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel12 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        Tutoria = new javax.swing.JFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        Tutoria = new javax.swing.JFrame();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel235 = new javax.swing.JLabel();
         jButton76 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuPerfil = new javax.swing.JMenu();
-        jMenuItemDatosAlum = new javax.swing.JMenuItem();
-        jMenuItemTutoriasPasa = new javax.swing.JMenuItem();
         jMenuTutorias = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuPerfil = new javax.swing.JMenu();
+        jMenuItemDatosAlum = new javax.swing.JMenuItem();
+        jMenuItemTutoriasPasa = new javax.swing.JMenuItem();
 
         jLabel237.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel237.setText("Nombre:");
@@ -298,15 +312,140 @@ public class PortalAlumno extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jLabel1.setText("Buscar Docente");
+        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel8.setText("Pedir tutorias academicas");
 
-        jLabel3.setText("Para seguir se necesita de un:");
+        jLabel9.setText("Ingresa el Horario que deseas");
 
-        jLabel4.setText("jLabel4");
+        jLabel10.setText("Fecha:");
 
-        jLabel5.setText("jLabel5");
+        jLabel11.setText("Hora de inicio:");
 
-        jLabel6.setText("Pedir Tutorias:");
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Profesor", "Material de Estudio", "Curso", "Tema", "Fecha", "Hora Inicio", "Hora fin", "Costo por Hora"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jLabel12.setText("Hora de Finalizacion:");
+
+        jLabel13.setText("Buscar:");
+
+        jButton4.setText("Seleccionar");
+
+        jButton5.setText("Realizar pago");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Salir");
+
+        javax.swing.GroupLayout PedirTutoriaLayout = new javax.swing.GroupLayout(PedirTutoria.getContentPane());
+        PedirTutoria.getContentPane().setLayout(PedirTutoriaLayout);
+        PedirTutoriaLayout.setHorizontalGroup(
+            PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jButton5))
+                                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                                        .addGap(33, 33, 33)
+                                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextField3)
+                                            .addComponent(jTextField4)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PedirTutoriaLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
+                                        .addComponent(jButton6)
+                                        .addGap(68, 68, 68))))
+                            .addComponent(jLabel9)))
+                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 713, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(8, Short.MAX_VALUE))
+            .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                        .addGap(494, 494, 494)
+                        .addComponent(jLabel2))
+                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PedirTutoriaLayout.setVerticalGroup(
+            PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel9)
+                        .addGap(30, 30, 30)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel10)
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(45, 45, 45)
+                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6)))
+                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout TutoriaLayout = new javax.swing.GroupLayout(Tutoria.getContentPane());
+        Tutoria.getContentPane().setLayout(TutoriaLayout);
+        TutoriaLayout.setHorizontalGroup(
+            TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        TutoriaLayout.setVerticalGroup(
+            TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -335,6 +474,8 @@ public class PortalAlumno extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Buscar Docente");
+
         jButton3.setText("Pago");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,111 +483,25 @@ public class PortalAlumno extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Para seguir se necesita de un:");
+
         jLabel7.setText("Buscar Docente");
 
-        javax.swing.GroupLayout PedirTutoriaLayout = new javax.swing.GroupLayout(PedirTutoria.getContentPane());
-        PedirTutoria.getContentPane().setLayout(PedirTutoriaLayout);
-        PedirTutoriaLayout.setHorizontalGroup(
-            PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                                .addGap(123, 123, 123)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(206, 206, 206)
-                                .addComponent(jLabel2))))
-                    .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                        .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                                .addGap(47, 47, 47)
-                                .addComponent(jLabel3))
-                            .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                                .addGap(94, 94, 94)
-                                .addComponent(jLabel5)))
-                        .addGap(118, 118, 118)
-                        .addComponent(jButton2)))
-                .addGap(185, 185, 185)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                    .addGap(266, 266, 266)
-                    .addComponent(jButton3)
-                    .addContainerGap(389, Short.MAX_VALUE)))
-            .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                    .addGap(46, 46, 46)
-                    .addComponent(jLabel7)
-                    .addContainerGap(588, Short.MAX_VALUE)))
-        );
-        PedirTutoriaLayout.setVerticalGroup(
-            PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(11, 11, 11)
-                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(57, 57, 57)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
-                        .addComponent(jButton2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PedirTutoriaLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5)))
-                .addContainerGap(32, Short.MAX_VALUE))
-            .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PedirTutoriaLayout.createSequentialGroup()
-                    .addContainerGap(627, Short.MAX_VALUE)
-                    .addComponent(jButton3)
-                    .addGap(48, 48, 48)))
-            .addGroup(PedirTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PedirTutoriaLayout.createSequentialGroup()
-                    .addGap(64, 64, 64)
-                    .addComponent(jLabel7)
-                    .addContainerGap(617, Short.MAX_VALUE)))
-        );
+        jLabel5.setText("jLabel5");
 
-        javax.swing.GroupLayout TutoriaLayout = new javax.swing.GroupLayout(Tutoria.getContentPane());
-        Tutoria.getContentPane().setLayout(TutoriaLayout);
-        TutoriaLayout.setHorizontalGroup(
-            TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        TutoriaLayout.setVerticalGroup(
-            TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jLabel6.setText("Pedir Tutorias:");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel235.setBackground(new java.awt.Color(51, 102, 255));
         jLabel235.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
         jLabel235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel235.setText("Bienvenido Estudiante");
 
+        jButton76.setBackground(new java.awt.Color(255, 0, 51));
+        jButton76.setForeground(new java.awt.Color(255, 255, 255));
         jButton76.setText("Salir");
 
         jDesktopPane1.setLayer(jLabel235, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -463,18 +518,29 @@ public class PortalAlumno extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton76)
-                .addGap(15, 15, 15))
+                .addGap(36, 36, 36))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(65, 65, 65)
                 .addComponent(jLabel235, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addComponent(jButton76)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
         );
 
+        jMenuTutorias.setText("Tutorias");
+
+        jMenuItem3.setText("Pedir Tutorias");
+        jMenuTutorias.add(jMenuItem3);
+
+        jMenuItem4.setText("Tutorias");
+        jMenuTutorias.add(jMenuItem4);
+
+        jMenuBar1.add(jMenuTutorias);
+
+        jMenuPerfil.setBackground(new java.awt.Color(102, 255, 102));
         jMenuPerfil.setText("Perfil");
 
         jMenuItemDatosAlum.setText("Datos Personales");
@@ -490,16 +556,6 @@ public class PortalAlumno extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuPerfil);
 
-        jMenuTutorias.setText("Tutorias");
-
-        jMenuItem3.setText("Pedir Tutorias");
-        jMenuTutorias.add(jMenuItem3);
-
-        jMenuItem4.setText("Tutorias");
-        jMenuTutorias.add(jMenuItem4);
-
-        jMenuBar1.add(jMenuTutorias);
-
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -510,7 +566,9 @@ public class PortalAlumno extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -540,6 +598,10 @@ public class PortalAlumno extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -556,11 +618,19 @@ public class PortalAlumno extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton76;
     private javax.swing.JComboBox<String> jComboBox37;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser20;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel235;
     private javax.swing.JLabel jLabel236;
@@ -576,10 +646,11 @@ public class PortalAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel251;
     private javax.swing.JLabel jLabel252;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -589,11 +660,16 @@ public class PortalAlumno extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuTutorias;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane19;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane20;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable19;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField txtApellidoAlumno;
     private javax.swing.JTextArea txtAreaDescripcionAlumno;
     private javax.swing.JTextField txtClaveAlumno;

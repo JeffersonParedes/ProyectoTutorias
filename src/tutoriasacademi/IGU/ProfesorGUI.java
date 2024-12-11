@@ -802,16 +802,16 @@ public class ProfesorGUI extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addComponent(jLabel20))
                     .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addGap(16, 16, 16)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel21))
                     .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
-                        .addGap(141, 141, 141)
+                        .addGap(93, 93, 93)
                         .addComponent(jButton1)
-                        .addGap(34, 34, 34)
+                        .addGap(29, 29, 29)
                         .addComponent(jButton2)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         SolicitudTutoriaLayout.setVerticalGroup(
             SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -825,11 +825,11 @@ public class ProfesorGUI extends javax.swing.JFrame {
                     .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(32, 32, 32))
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addGap(22, 22, 22))
         );
 
         jLabel23.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
