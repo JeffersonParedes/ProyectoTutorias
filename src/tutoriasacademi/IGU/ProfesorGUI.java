@@ -109,6 +109,24 @@ public class ProfesorGUI extends javax.swing.JFrame {
         txtTituloTema = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
         txtContenidoTema = new javax.swing.JTextArea();
+        SolicitudTutoria = new javax.swing.JFrame();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        Tutoria = new javax.swing.JFrame();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
@@ -749,6 +767,147 @@ public class ProfesorGUI extends javax.swing.JFrame {
                         .addGap(129, 129, 129))))
         );
 
+        jLabel20.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel20.setText("Solisitudes Realizadas al Profesor:");
+
+        jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Salir");
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Alumno", "MaterialEstudio", "Fecha", "Hora inicio", "Hora fin"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable4);
+
+        javax.swing.GroupLayout SolicitudTutoriaLayout = new javax.swing.GroupLayout(SolicitudTutoria.getContentPane());
+        SolicitudTutoria.getContentPane().setLayout(SolicitudTutoriaLayout);
+        SolicitudTutoriaLayout.setHorizontalGroup(
+            SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                .addGroup(SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel20))
+                    .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel21))
+                    .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(jButton1)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton2)))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        SolicitudTutoriaLayout.setVerticalGroup(
+            SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel20)
+                .addGroup(SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel21))
+                    .addGroup(SolicitudTutoriaLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(SolicitudTutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(32, 32, 32))
+        );
+
+        jLabel23.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel23.setText("Tutoria");
+
+        jLabel25.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel25.setText("HorarioSeleccionado:");
+
+        jLabel35.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel35.setText("Retroalimentacion:");
+
+        jLabel36.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel36.setText("Pago");
+
+        jLabel37.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel37.setText("Alumno");
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout TutoriaLayout = new javax.swing.GroupLayout(Tutoria.getContentPane());
+        Tutoria.getContentPane().setLayout(TutoriaLayout);
+        TutoriaLayout.setHorizontalGroup(
+            TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TutoriaLayout.createSequentialGroup()
+                .addGroup(TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(TutoriaLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel25)
+                            .addGroup(TutoriaLayout.createSequentialGroup()
+                                .addComponent(jLabel36)
+                                .addGap(67, 67, 67)
+                                .addComponent(jLabel24))
+                            .addComponent(jLabel37)
+                            .addComponent(jLabel35))
+                        .addGap(26, 26, 26)
+                        .addGroup(TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(jTextField1)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField3)))
+                    .addGroup(TutoriaLayout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addComponent(jLabel23)))
+                .addContainerGap(77, Short.MAX_VALUE))
+        );
+        TutoriaLayout.setVerticalGroup(
+            TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TutoriaLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jLabel37)
+                .addGap(23, 23, 23)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel36)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(TutoriaLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel23)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel25)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(TutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Portal de Tutor");
 
@@ -916,6 +1075,14 @@ public class ProfesorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemMaterialActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -926,7 +1093,9 @@ public class ProfesorGUI extends javax.swing.JFrame {
     private javax.swing.JFrame Disponivilidad;
     private com.toedter.calendar.JDateChooser FechaTutor;
     private javax.swing.JFrame MaterialEstudio;
+    private javax.swing.JFrame SolicitudTutoria;
     private javax.swing.JFrame Tema;
+    private javax.swing.JFrame Tutoria;
     private javax.swing.JButton btnAgregarTema;
     private javax.swing.JButton btnAtrasDatosTutor;
     private javax.swing.JButton btnBorrarTema;
@@ -940,8 +1109,11 @@ public class ProfesorGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnHechoDisp;
     private javax.swing.JButton btnHechoMaterial;
     private javax.swing.JButton btnHechoTema;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboGeneroTutor;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -955,7 +1127,12 @@ public class ProfesorGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -966,6 +1143,9 @@ public class ProfesorGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -985,9 +1165,14 @@ public class ProfesorGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField txtApellidoTutor;
     private javax.swing.JTextField txtAsignaturaTema;
     private javax.swing.JTextField txtAñoTutor;

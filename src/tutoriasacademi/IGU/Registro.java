@@ -11,8 +11,7 @@ import tutoriasacademi.ArrayList.AlumnoArrayList;
 import tutoriasacademi.ArrayList.ProfesorArrayList;
 import tutoriasacademi.logica.Disponibilidad;
 import tutoriasacademi.logica.MaterialDeEstudio;
-import tutoriasacademi.logica.Tema;
-import tutoriasacademi.logica.Evaluacion;
+
 /**
  *
  * @author jeffersonparedespretel
@@ -889,8 +888,8 @@ private ProfesorArrayList listaProfesor = new ProfesorArrayList();
         texMensaje.setText("Ingrese un correo electrónico válido.");
         return;
     }
-    Tema tema = new Tema("TemaNombre", "TemaDescripcion", "TemaTipo", "TemaNivel");
-MaterialDeEstudio material = new MaterialDeEstudio("Nombre", "Descripción", "Tipo", tema);
+    
+MaterialDeEstudio material = new MaterialDeEstudio("Nombre", "Descripción", "Tipo", "tema");
 Disponibilidad disponibilidad = new Disponibilidad(1, "Disponible", 10, 50.0, 100.0);
 
     Profesor nuevoProfesor = new Profesor(

@@ -1,11 +1,7 @@
 
 package tutoriasacademi.logica;
 
-/**
- *
- * @author jeffersonparedespretel
- */
-public class Persona {
+abstract class Persona {
     private String Nombre;
     private String Apellido;
     private String Correo;
